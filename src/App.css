@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+
+.nav {
+  padding: 1em;
+}
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #333;
+}
+.nav li a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: .5em 1em;
+}
+.nav li a:hover {
+  background: tomato;
+  color: white;
+}
+@media screen and (min-width: 480px) {
+  .nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.itemListContainer {
+  margin: 1em;
+  color: white;
+  background-color: #333;
+}
