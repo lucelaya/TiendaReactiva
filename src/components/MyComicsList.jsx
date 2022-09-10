@@ -2,7 +2,7 @@ import React from "react";
 import { Comic } from "./Comic";
 
 export const MyComicsList = ({ comics }) => {
-    const flex = { display: "flex", justifyContent: "space-evenly" };
+    const flex = { display: "flex", justifyContent: "space-evenly", flexWrap: "wrap"};
     return (
         <section style={flex}>
             {comics.length ? (

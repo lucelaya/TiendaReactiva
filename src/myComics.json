@@ -1,22 +1,83 @@
 [
   {
     "id": "1",
-    "title": "Sandman",
+    "slug": "Sandman1",
+    "title": "Sandman#1",
+    "serie": "Sandman",
     "price": 150,
     "stock": 10,
     "img": "./img/Sandman001.jpeg"
   },
   {
     "id": "2",
-    "title": "100 Bullets",
+    "slug": "Bullets1",
+    "title": "100 Bullets#1",
+    "serie": "noSandman",
     "price": 120,
     "stock": 20,
-    "img": "./img/Balas001.jpeg"},
+    "img": "./img/Balas001.jpeg"
+  },
   {
     "id": "3",
-    "title": "Y: The last man",
+    "slug": "YTLM01",
+    "title": "Y: The last man#1",
+    "serie": "noSandman",
     "price": 180,
     "stock": 0,
     "img": "./img/YTLM01.jpeg"
+  },
+  {
+    "id": "4",
+    "slug": "Sandman2",
+    "title": "Sandman#2",
+    "serie": "Sandman",
+    "price": 150,
+    "stock": 10,
+    "img": "./img/Sandman002.jpg"
+  },
+  {
+    "id": "5",
+    "slug": "Bullets2",
+    "title": "100 Bullets#2",
+    "serie": "noSandman",
+    "price": 120,
+    "stock": 20,
+    "img": "./img/Balas002.jpeg"
+  },
+  {
+    "id": "6",
+    "slug": "YTLM02",
+    "title": "Y: The last man#2",
+    "serie": "noSandman",
+    "price": 180,
+    "stock": 0,
+    "img": "./img/YTLM02.jpeg"
+  },
+  {
+    "id": "7",
+    "slug": "Sandman3",
+    "title": "Sandman#3",
+    "serie": "Sandman",
+    "price": 150,
+    "stock": 10,
+    "img": "./img/Sandman003.jpg"
+  },
+  {
+    "id": "8",
+    "slug": "Bullets3",
+    "title": "100 Bullets#3",
+    "serie": "noSandman",
+    "price": 120,
+    "stock": 20,
+    "img": "./img/Balas003.jpeg"
+  },
+  {
+    "id": "9",
+    "slug": "YTLM03",
+    "title": "Y: The last man#3",
+    "serie": "noSandman",
+    "price": 180,
+    "stock": 0,
+    "img": "./img/YTLM03.jpeg"
   }
 ]

@@ -6,6 +6,7 @@ export const Comic = ({ title, img, price, stock }) => {
 
     const [styleRead, setStyleRead] = useState(false);
     const [read, setRead] = useState(false);
+    console.log(img)
 
     function readComics() {
         setStyleRead(styleRead ? false : true);
@@ -18,7 +19,7 @@ export const Comic = ({ title, img, price, stock }) => {
             <h3>Precio: ${price}</h3>
             <h3>Stock: {stock}</h3>
 
-            <img src={img} alt="" style={{ width: "15rem" }} />
+            <img src={"../."+img} alt="" style={{ width: "15rem" }} />
 
             <h4 style={{ color: styleRead ? "green" : "red", cursor: "pointer" }}
                 onClick={readComics}>
@@ -32,5 +33,5 @@ export const Comic = ({ title, img, price, stock }) => {
             <ItemCounter stock={stock}/>
 
         </article>
-    );
+    )
 };
