@@ -12,7 +12,7 @@
     "id": "2",
     "slug": "Bullets1",
     "title": "100 Bullets#1",
-    "serie": "noSandman",
+    "serie": "100Balas",
     "price": 120,
     "stock": 20,
     "img": "./img/Balas001.jpeg"
@@ -21,7 +21,7 @@
     "id": "3",
     "slug": "YTLM01",
     "title": "Y: The last man#1",
-    "serie": "noSandman",
+    "serie": "YTLM",
     "price": 180,
     "stock": 0,
     "img": "./img/YTLM01.jpeg"
@@ -39,7 +39,7 @@
     "id": "5",
     "slug": "Bullets2",
     "title": "100 Bullets#2",
-    "serie": "noSandman",
+    "serie": "100Balas",
     "price": 120,
     "stock": 20,
     "img": "./img/Balas002.jpeg"
@@ -48,7 +48,7 @@
     "id": "6",
     "slug": "YTLM02",
     "title": "Y: The last man#2",
-    "serie": "noSandman",
+    "serie": "YTLM",
     "price": 180,
     "stock": 0,
     "img": "./img/YTLM02.jpeg"
@@ -66,7 +66,7 @@
     "id": "8",
     "slug": "Bullets3",
     "title": "100 Bullets#3",
-    "serie": "noSandman",
+    "serie": "100Balas",
     "price": 120,
     "stock": 20,
     "img": "./img/Balas003.jpeg"
@@ -75,7 +75,7 @@
     "id": "9",
     "slug": "YTLM03",
     "title": "Y: The last man#3",
-    "serie": "noSandman",
+    "serie": "YTLM",
     "price": 180,
     "stock": 0,
     "img": "./img/YTLM03.jpeg"

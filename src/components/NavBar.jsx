@@ -1,6 +1,6 @@
 import React from 'react'
-import CartWidget from './CartWidget'
-import { Link, NavLink } from "react-router-dom"
+// import CartWidget from './CartWidget'
+import { NavLink } from "react-router-dom"
 
 const NavBar = () => {
 
@@ -12,7 +12,7 @@ const NavBar = () => {
             <div className="flex-1">
                 <NavLink className={navLinkClass} to={'/'}>Mi app</NavLink>
                 <NavLink className={navLinkClass} to={'/shop'}>Mi tienda</NavLink>
-                <NavLink className={navLinkClass} to={'/sandman'}>Sandman</NavLink>
+                <NavLink className={navLinkClass} to={'/serie'}>Serie</NavLink>
             </div>
         </div>
         // <nav className='nav'>
