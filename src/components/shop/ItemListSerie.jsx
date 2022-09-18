@@ -14,7 +14,7 @@ const ItemListSerie = () => {
     let coleccion = items
     let series = []
     coleccion.map(item=>{series.push(item.serie)})
-    console.log(series)
+    // console.log(series)
     const filtro = series.reduce((acc,item)=>{
         if(!acc.includes(item)){
             acc.push(item);

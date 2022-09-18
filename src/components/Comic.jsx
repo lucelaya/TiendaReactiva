@@ -31,6 +31,7 @@ export const Comic = ({ title, img, price, stock }) => {
             </h4>
 
             <ItemCounter stock={stock}/>
+            {/* <ItemCounter stock={stock} initial={1} onAdd={onAdd} /> */}
 
         </article>
     )

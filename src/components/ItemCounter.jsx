@@ -19,6 +19,9 @@ const ItemCounter = ({ stock }) => {
         </div>
         <button onClick={handleClick2} className='btn my-5'>-</button>
         <button onClick={handleClick} className='btn my-5'>+</button>
+        {/* <button onClick={() => { onAdd(counter)}} variant="outline-success" className="my-3 ">
+        Agregar a Carrito
+        </button> */}
         </>
     )
 }

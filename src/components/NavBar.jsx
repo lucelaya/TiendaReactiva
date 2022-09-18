@@ -11,8 +11,9 @@ const NavBar = () => {
         <div className="navbar bg-base-100">
             <div className="flex-1">
                 <NavLink className={navLinkClass} to={'/'}>Mi app</NavLink>
-                <NavLink className={navLinkClass} to={'/shop'}>Mi tienda</NavLink>
                 <NavLink className={navLinkClass} to={'/serie'}>Serie</NavLink>
+                <NavLink className={navLinkClass} to={'/shop'}>Mi tienda</NavLink>
+                <NavLink className={navLinkClass} to={'/carrito'}>Carrito</NavLink>
             </div>
         </div>
         // <nav className='nav'>

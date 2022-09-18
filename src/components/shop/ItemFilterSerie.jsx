@@ -11,7 +11,7 @@ const ItemFilterSerie = () => {
     const { serie } = useParams()
     useEffect(() => {
         getItem().then(data => {
-            console.log(item.title)
+            // console.log(item.title)
             if (data) {
                 setItem(data)
             }
@@ -29,8 +29,8 @@ const ItemFilterSerie = () => {
     }
     return (
         <div>
-            {productsAux.map(item =>
-                <Comic key={item.id} {...item} />)
+            {productsAux.map(items =>
+                <Comic key={item.id} {...items} />)
             }
         </div>
     )
