@@ -1,9 +1,10 @@
-import React from 'react'
-
-const CartWidget = () => {
+import { Link } from "react-router-dom";
+function CartWidget() {
     return (
-        <i className="fa-solid fa-cart-arrow-down"></i>
-    )
+        <Link to={`/cart`}>
+            <img src="/assets/baseline_shopping_cart_black_24dp.png" alt="shopping cart" />
+        </Link>
+    );
 }
+export default CartWidget;
 
-export default CartWidget
