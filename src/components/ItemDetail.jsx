@@ -14,6 +14,7 @@ const ItemDetail = ({ item }) => {
 
   const onAdd = (quantityToAdd) =>{
     if (isNaN(item.id)) { 
+      // debugger
       console.log(item)
     } else {
       // if (quantityToAdd !== 0) {

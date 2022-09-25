@@ -1,34 +1,34 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import Container from "react-bootstrap/esm/Container";
-import products from "./products";
+// import products from "./products";
 import { useParams } from "react-router-dom";
+
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
 const ItemListContainer = ({ greeting }) => {
   const [items, setItems] = useState([]);
   const { category } = useParams();
 
-  const getItems = (data, time) =>
-    new Promise((resolve, reject) => {
-      setTimeout(() => {
-        if (data) {
-          resolve(data);
-        } else {
-          reject("Error");
-        }
-      }, time);
-    });
+  const getProducts = () => {
+    const db = getFirestore()
+    const itemCollection = collection( db, 'items' )
+    getDocs( itemCollection ).then( snapshot => {
+      setItems( snapshot.docs.map( d => ({id: d.id, ...d.data()}) ) );
+    })
+  }
+
+  const getProductsByCategory = () => {
+    const db = getFirestore()
+    const itemCollection = collection( db, 'items' )
+    const q = query(itemCollection, where('category', '==', category) )
+    getDocs( q ).then( snapshot => {
+      setItems( snapshot.docs.map( d => ({id: d.id, ...d.data()}) ) );
+    })
+  }
 
   useEffect(() => {
-    getItems(products, 2000)
-      .then((res) => {
-        console.log(res);
-        console.log(category)
-        category ? setItems(res.filter( p => p.category === category)) : setItems(res);
-      })
-      .catch((err) => {
-        console.log(err, ": no hay items para mostrar");
-      });
+    category ? getProductsByCategory() : getProducts();
   });
   return (
     <Container>
@@ -37,3 +37,5 @@ const ItemListContainer = ({ greeting }) => {
   );
 };
 export default ItemListContainer;
+
+

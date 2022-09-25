@@ -38,6 +38,7 @@ const CartItemsProvider = ({ defaultValue = [], children }) => {
         console.log("Item agregado al carrito");
       }
     }else{
+      // debugger
       if (quantity !== 0) {
         const newItem = { ...item,quantity};
         setItems([...items, newItem]);
