@@ -23,6 +23,12 @@ function Cart() {
                 </Button>
                 </>
             )}
+            {items.reduce( (acc, c) => acc + c.quantity, 0)> 0 && (
+                <><h3 style={{ margin: "5rem" }}>Cantidad Total de Items: {items.reduce( (acc, c) => acc + c.quantity, 0)}</h3></>
+            )}
+            {items.reduce( (acc, c) => acc + c.price * c.quantity, 0)> 0 && (
+                <><h3 style={{ margin: "5rem" }}>Total de la Compra: {items.reduce( (acc, c) => acc + c.price * c.quantity, 0)}</h3></>
+            )}
         </div>
   )
 }

@@ -14,7 +14,7 @@ function ItemCount({ stock, initial, onAdd }) {
   };
 
   const handleSubtract = () => {
-    if (counter > 1) {
+    if (counter >= 1) {
       setCounter(counter - 1);
     }
   };

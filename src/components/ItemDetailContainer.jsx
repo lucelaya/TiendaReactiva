@@ -15,16 +15,19 @@ function ItemDetailContainer() {
         if (product) {resolve( product );}
         else { reject("Error");} 
       }, time);
-    });
+    },[]);
 
     useEffect(() => {
-        getItem( 2000 )
+        getItem(500)
           .then((res) => {setProducto(res);})
           .catch((err) => {console.log(err, ": No existe el componente");});
-      }, []);
+      });
 
   return (
+    <>
     <ItemDetail className="justify-content-center" item={producto} />
+    
+    </>
   )
 }
 

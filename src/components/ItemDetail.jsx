@@ -16,7 +16,9 @@ const ItemDetail = ({ item }) => {
     if (isNaN(item.id)) { 
       console.log(item)
     } else {
-      setFlagItemCount(!flagItemCount)
+      // if (quantityToAdd !== 0) {
+        setFlagItemCount(!flagItemCount)
+      // }
       addItem(item,quantityToAdd)
     }
   }
@@ -46,7 +48,7 @@ const ItemDetail = ({ item }) => {
           <Card.Text className=''>  
             <span>$ {Number.parseFloat(item.price).toFixed(2)}</span>
           </Card.Text>
-          { 
+          {
             flagItemCount ?
             <ItemCount className="text-center" stock={item.stock} initial={1} onAdd={onAdd}/>
             :
