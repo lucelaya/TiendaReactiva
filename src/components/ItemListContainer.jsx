@@ -29,7 +29,7 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
     category ? getProductsByCategory() : getProducts();
-  });
+  },[category]);
   return (
     <Container>
       <ItemList items={items} />

@@ -29,8 +29,8 @@ function ItemDetailContainer() {
         getItem(500)
           .then((res) => {setProducto(res);})
           .catch((err) => {console.log(err, ": No existe el componente");});
-        // },[]);
-        });
+        },[]);
+        // });
 
   return (
     <>
