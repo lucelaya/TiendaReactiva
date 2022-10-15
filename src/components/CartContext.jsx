@@ -23,22 +23,18 @@ const CartItemsProvider = ({ defaultValue = [], children }) => {
     console.log(isInCart(item))
     if (isInCart(item)) {
       console.log("El item ya se encontraba cargado");
-      // debugger
       if (quantity === 0) {
         removeItem(item)
         console.log("Item eliminado del carrito");
       } else {
-        // debugger
         const removeItem = items.filter((s) => s.id !== item.id)
         const newItem = { ...item,quantity};
         setItems([...removeItem, newItem]);
-        // debugger
         console.log(JSON.stringify(removeItem))
         console.log(JSON.stringify(items))
         console.log("Item agregado al carrito");
       }
     }else{
-      // debugger
       if (quantity !== 0) {
         const newItem = { ...item,quantity};
         setItems([...items, newItem]);

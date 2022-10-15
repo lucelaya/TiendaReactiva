@@ -18,6 +18,7 @@ function ItemCount({ stock, initial, onAdd }) {
       setCounter(counter - 1);
     }
   };
+
   return (
     <div>
       <Row>
@@ -27,7 +28,7 @@ function ItemCount({ stock, initial, onAdd }) {
           </Button>
         </Col>
         <Col>
-          <Card.Text className="text-center">{counter}</Card.Text>
+          <Card.Text className="text-center ">{counter}</Card.Text>
         </Col>
         <Col className="me-5">
           <Button onClick={handleOnAdd} variant="outline-secondary">
@@ -35,9 +36,15 @@ function ItemCount({ stock, initial, onAdd }) {
           </Button>
         </Col>
       </Row>
+      {counter > 0 ? (
       <Button onClick={() => { onAdd(counter)}} variant="outline-success" className="my-3 ">
         Agregar a Carrito
       </Button>
+      ) : (
+      <Button onClick={() => { onAdd(counter)}} variant="outline-success" className="my-3 ">
+        Eliminar del Carrito
+      </Button>
+      )}
     </div>
   );
 }

@@ -4,7 +4,6 @@ import {Button} from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Item({item}) {
-//Estructura item: {id, title, price, pictureUrl}
 
 return(
     <Col>
@@ -13,17 +12,11 @@ return(
             <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
                 <Card.Text>
-                    <h6>
                         Precio Unitario: $ {Number.parseFloat(item.price).toFixed(2)}
-                    </h6>
                     {item.quantity > 0 && (
                     <>
-                        <h6>
-                            Cantidad: {parseFloat(item.quantity)}
-                        </h6>
-                        <h6>
-                            Precio: $ {Number.parseFloat(item.price*item.quantity).toFixed(2)}
-                        </h6>
+                            <p>Cantidad: {parseFloat(item.quantity)}</p>
+                            <p>Precio: $ {Number.parseFloat(item.price*item.quantity).toFixed(2)}</p>
                     </>
                     )}
                 </Card.Text>

@@ -14,12 +14,9 @@ const ItemDetail = ({ item }) => {
 
   const onAdd = (quantityToAdd) =>{
     if (isNaN(item.id)) { 
-      // debugger
       console.log(item)
     } else {
-      // if (quantityToAdd !== 0) {
         setFlagItemCount(!flagItemCount)
-      // }
       addItem(item,quantityToAdd)
     }
   }
@@ -27,7 +24,7 @@ const ItemDetail = ({ item }) => {
   return (
       <Card className="py-4 " style={{ width: "18rem" }}>
         <Card.Img
-          style={{ width: "5rem" }}
+          style={{ width: "10rem" }}
           variant="top"
           src={item.pictureUrl}
         />
@@ -36,12 +33,7 @@ const ItemDetail = ({ item }) => {
           <Card.Subtitle>
             Descripcion
           </Card.Subtitle>
-          <Card.Text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-            molestiae quas. Quis reiciendis ratione porro amet culpa molestiae
-            qui. Dignissimos ex reiciendis corporis cupiditate dolorem atque,
-            cumque deleniti doloribus blanditiis.
-          </Card.Text>
+          <Card.Text className="small">{item.description}</Card.Text>
           
           <Card.Subtitle>
                 Precio Unitario

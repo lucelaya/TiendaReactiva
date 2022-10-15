@@ -33,7 +33,7 @@ function App() {
     <CartItemsProvider>
       <BrowserRouter>
         <NavBar/>
-        <h1 className="display-3 text-center">React Library</h1>
+        <h1 className="display-3 text-center">Lucien's Library</h1>
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
           <Route path='/category/:category' element={<ItemListContainer/>}/>  

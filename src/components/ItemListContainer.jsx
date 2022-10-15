@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import Container from "react-bootstrap/esm/Container";
-// import products from "./products";
 import { useParams } from "react-router-dom";
-
 import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
   const [items, setItems] = useState([]);
   const { category } = useParams();
 
@@ -36,6 +34,5 @@ const ItemListContainer = ({ greeting }) => {
     </Container>
   );
 };
+
 export default ItemListContainer;
-
-
