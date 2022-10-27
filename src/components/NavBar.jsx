@@ -33,8 +33,8 @@ function NavBar() {
                 <NavLink className="nav-link" to={'/category/YTLM'}>Y El Ultimio Hombre</NavLink>
               {/* </NavDropdown.Item> */}
             </NavDropdown>
-            <CartWidget/>
           </Nav>
+          <CartWidget/>
         </Navbar.Collapse>
       </Container>
     </Navbar>
