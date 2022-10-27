@@ -4,12 +4,16 @@ import { Button } from "react-bootstrap";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 
-function ItemCount({ stock, initial, onAdd }) {
+function ItemCount({ sold, stock, initial, onAdd }) {
   const [counter, setCounter] = useState(initial);
 
   const handleOnAdd = () => {
-    if (counter + 1 <= stock) {
-      setCounter(counter + 1);
+    if (stock === sold) {
+      setCounter(0)
+    } else {
+      if (counter + 1 <= stock - sold) {
+        setCounter(counter + 1);
+      }
     }
   };
 

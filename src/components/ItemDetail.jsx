@@ -16,8 +16,10 @@ const ItemDetail = ({ item }) => {
     if (isNaN(item.id)) { 
       console.log(item)
     } else {
+      // if (quantityToAdd > 0) {
         setFlagItemCount(!flagItemCount)
-      addItem(item,quantityToAdd)
+        addItem(item,quantityToAdd)
+      // }
     }
   }
 
@@ -43,13 +45,21 @@ const ItemDetail = ({ item }) => {
           </Card.Text>
           {
             flagItemCount ?
-            <ItemCount className="text-center" stock={item.stock} initial={1} onAdd={onAdd}/>
+            <ItemCount className="text-center" sold={item.sold} stock={item.stock} initial={0} onAdd={onAdd}/>
             :
-            <Link to={`/cart`}>
+            <>
+              <Link to={`/cart`}>
+                <Button variant="outline-dark">
+                  Finalizar Compra
+                </Button>
+              </Link>
+              
+              <Link to={`/`}>
               <Button variant="outline-dark">
-                Finalizar Compra
+                Segui Comprando
               </Button>
-            </Link>
+              </Link>
+            </>
           }
         </Card.Body>
       </Card>
