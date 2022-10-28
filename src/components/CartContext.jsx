@@ -20,7 +20,7 @@ const CartItemsProvider = ({ defaultValue = [], children }) => {
 
   //AGREGA UN ELEMENTO AL CARRITO
   const addItem = (item,quantity) => {
-    console.log(isInCart(item))
+    // console.log(isInCart(item))
     if (isInCart(item)) {
       console.log("El item ya se encontraba cargado");
       if (quantity === 0) {

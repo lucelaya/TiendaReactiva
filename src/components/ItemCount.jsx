@@ -40,14 +40,22 @@ function ItemCount({ sold, stock, initial, onAdd }) {
           </Button>
         </Col>
       </Row>
-      {counter > 0 ? (
-      <Button onClick={() => { onAdd(counter)}} variant="outline-success" className="my-3 ">
-        Agregar a Carrito
+      {stock === sold ? (
+      <Button href="/">
+        Sin Stock
       </Button>
-      ) : (
-      <Button onClick={() => { onAdd(counter)}} variant="outline-success" className="my-3 ">
-        Eliminar del Carrito
-      </Button>
+      ):(
+        sold < stock && (
+          counter > 0 ? (
+          <Button onClick={() => { onAdd(counter)}} variant="outline-success" className="my-3 ">
+            Agregar a Carrito
+          </Button>
+          ) : (
+          <Button onClick={() => { onAdd(counter)}} variant="outline-success" className="my-3 ">
+            Eliminar del Carrito
+          </Button>
+          )
+        )
       )}
     </div>
   );

@@ -45,7 +45,7 @@ const ItemDetail = ({ item }) => {
           </Card.Text>
           {
             flagItemCount ?
-            <ItemCount className="text-center" sold={item.sold} stock={item.stock} initial={0} onAdd={onAdd}/>
+            <ItemCount className="text-center" sold={item.sold} stock={item.stock} initial={1} onAdd={onAdd}/>
             :
             <>
               <Link to={`/cart`}>

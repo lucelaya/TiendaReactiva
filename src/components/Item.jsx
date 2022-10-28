@@ -15,8 +15,8 @@ return(
                         Precio Unitario: $ {Number.parseFloat(item.price).toFixed(2)}
                     {item.quantity > 0 && (
                     <>
-                            <p>Cantidad: {parseFloat(item.quantity)}</p>
-                            <p>Precio: $ {Number.parseFloat(item.price*item.quantity).toFixed(2)}</p>
+                        <br/>Cantidad: {parseFloat(item.quantity)}
+                        <br/>Precio: $ {Number.parseFloat(item.price*item.quantity).toFixed(2)}
                     </>
                     )}
                 </Card.Text>

@@ -52,15 +52,17 @@ function Cart() {
                 console.log({ id })
                 // debugger
                 items.map(d => {
-
-                    // const itemsCollection = collection(db, 'items')
-                    // db.collection('items').doc(d.id).update({sold: d.quantity})
-                    // itemsCollection.doc(d.id).update({
-                    //     "sold": d.quantity})
-                    //ACTUALIZAR sold: ITEM
+                    let docRef = doc(db, "items", d.id);
+                    let data = {sold: d.quantity}
+                    updateDoc(docRef, data)
+                    .then(docRef => {
+                        console.log("Value of an Existing Document Field has been updated");
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
                     console.log(d.id, d.quantity)
-                    // debugger
-                    return 1
+                    return true
                 })
                 clear();
             })
@@ -97,18 +99,21 @@ function Cart() {
         const db = getFirestore()
         const orderCollection = collection(db, 'orders')
         const order = document.getElementById("orderId");
+        const updateContainer = document.getElementById("updateContainer");
         console.log(order.value)
         // debugger    
         if (order.value) {
+            updateContainer.innerText=''
             const orderDoc = doc(orderCollection, order.value)//"eupZrzLWAOOiUqmoRFQ7")
             updateDoc(orderDoc, {
                 price: 222,
                 buyer: { name: 'Carlos', phone: 55555, email: 'carlos@gmail.com' },
             }).then(res => { 
                 console.log('res: ' + res) 
+                updateContainer.innerText='Orden Actualizada'
             })
         } else {
-            console.log('Ingrese identificador de la Orden')
+            updateContainer.innerText='Ingrese identificador de la Orden'
         }
     }
 
@@ -180,14 +185,16 @@ function Cart() {
                 )}
             </Container>
             <Container>
-                <Button variant="outline-dark" className='m-5' onClick={getOrdersHandler}>
+                <Button variant="outline-dark" className='m-3' onClick={getOrdersHandler}>
                     ver Ordenes
                 </Button>
                 <div id="ordersContainer"></div>
-                <Button variant="outline-dark" className='m-5' onClick={updateHanlder}>
+
+                <Button variant="outline-dark" className='m-3' onClick={updateHanlder}>
                     actualizar orden
                 </Button>
                 <input id="orderId" type="text" placeholder='Orden'/>
+                <div style={{ marginLeft: "48px" }} id="updateContainer"></div>
             </Container>
         </div>
     )
